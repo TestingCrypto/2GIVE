@@ -84,7 +84,6 @@ BOOST_AUTO_TEST_CASE(boolarg)
     BOOST_CHECK(!GetBoolArg("-foo"));
     BOOST_CHECK(!GetBoolArg("-foo", false));
     BOOST_CHECK(!GetBoolArg("-foo", true));
-
 }
 
 BOOST_AUTO_TEST_CASE(stringarg)
@@ -108,7 +107,6 @@ BOOST_AUTO_TEST_CASE(stringarg)
     ResetArgs("-foo=eleven");
     BOOST_CHECK_EQUAL(GetArg("-foo", ""), "eleven");
     BOOST_CHECK_EQUAL(GetArg("-foo", "eleven"), "eleven");
-
 }
 
 BOOST_AUTO_TEST_CASE(intarg)
