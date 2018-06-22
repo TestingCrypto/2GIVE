@@ -670,7 +670,7 @@ void CoinControlDialog::updateView()
                     sLabel = model->getAddressTableModel()->labelForAddress(sAddress);
                 if (sLabel.length() == 0)
                     sLabel = tr("(no label)");
-                itemOutput->setText(COLUMN_LABEL, sLabel); 
+                itemOutput->setText(COLUMN_LABEL, sLabel);
             }
 
             // amount
@@ -703,7 +703,7 @@ void CoinControlDialog::updateView()
             // vout index
             itemOutput->setText(COLUMN_VOUT_INDEX, QString::number(out.i));
 
-            // disable locked coins     
+            // disable locked coins
             /*if (model->isLockedCoin(txhash, out.i))
             {
                 COutPoint outpt(txhash, out.i);
