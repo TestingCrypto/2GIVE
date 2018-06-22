@@ -53,7 +53,6 @@ private:
 
 private slots:
     void unitChanged(int idx);
-
 };
 
 
