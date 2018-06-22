@@ -89,7 +89,6 @@ public:
 
     // Calculate the relative chance this entry should be given when selecting nodes to connect to
     double GetChance(int64 nNow = GetAdjustedTime()) const;
-
 };
 
 // Stochastic address manager
@@ -195,10 +194,8 @@ private:
     std::vector<std::set<int> > vvNew;
 
 protected:
-
     // Find an entry.
     CAddrInfo* Find(const CNetAddr& addr, int *pnId = NULL);
-
     // find an entry, creating it if necessary.
     // nTime and nServices of found node is updated, if necessary.
     CAddrInfo* Create(const CAddress &addr, const CNetAddr &addrSource, int *pnId = NULL);
@@ -243,7 +240,6 @@ protected:
     void Connected_(const CService &addr, int64 nTime);
 
 public:
-
     IMPLEMENT_SERIALIZE
     (({
         // serialized format:
