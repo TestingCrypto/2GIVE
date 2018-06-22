@@ -65,7 +65,7 @@ namespace json_spirit
         const Char_type c2( *( ++begin ) );
 
         return ( hex_to_num( c1 ) << 4 ) + hex_to_num( c2 );
-    }       
+    }
 
     template< class Char_type, class Iter_type >
     Char_type unicode_str_to_char( Iter_type& begin )
@@ -75,9 +75,9 @@ namespace json_spirit
         const Char_type c3( *( ++begin ) );
         const Char_type c4( *( ++begin ) );
 
-        return ( hex_to_num( c1 ) << 12 ) + 
-               ( hex_to_num( c2 ) <<  8 ) + 
-               ( hex_to_num( c3 ) <<  4 ) + 
+        return ( hex_to_num( c1 ) << 12 ) +
+               ( hex_to_num( c2 ) <<  8 ) +
+               ( hex_to_num( c3 ) <<  4 ) +
                hex_to_num( c4 );
     }
 
