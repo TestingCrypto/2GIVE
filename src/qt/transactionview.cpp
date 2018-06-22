@@ -209,7 +209,6 @@ void TransactionView::chooseDate(int idx)
         transactionProxyModel->setDateRange(
                 QDateTime(startOfWeek),
                 TransactionFilterProxy::MAX_DATE);
-
         } break;
     case ThisMonth:
         transactionProxyModel->setDateRange(
