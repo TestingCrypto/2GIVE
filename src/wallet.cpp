@@ -1563,7 +1563,6 @@ printf("nChange > 0\n");
                         vector<CTxOut>::iterator position = wtxNew.vout.begin()+GetRandInt(wtxNew.vout.size());
                         wtxNew.vout.insert(position, CTxOut(nChange, scriptChange));
                      }
-
                 }
                 else
                     reservekey.ReturnKey();
@@ -2081,7 +2080,6 @@ void CWallet::PrintWallet(const CBlock& block)
             CWalletTx& wtx = mapWallet[block.vtx[1].GetHash()];
             printf("    stake: %d  %d  %"PRI64d"", wtx.GetDepthInMainChain(), wtx.GetBlocksToMaturity(), wtx.GetCredit());
          }
-
     }
     printf("\n");
 }
@@ -2183,8 +2181,6 @@ bool CWallet::TopUpKeyPool(std::string prefix)
 
 void CWallet::ReserveKeyFromKeyPool(int64& nIndex, CKeyPool& keypool)
 {
-
-
     nIndex = -1;
     keypool.vchPubKey = CPubKey();
     {
@@ -2213,8 +2209,6 @@ void CWallet::ReserveKeyFromKeyPool(int64& nIndex, CKeyPool& keypool)
 
         if (fDebug && GetBoolArg("-printkeypool"))
             printf("keypool reserve %"PRI64d"\n", nIndex);
-
-
     }
 }
 
