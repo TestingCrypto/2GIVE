@@ -29,7 +29,6 @@ protected:
     enum { WIDTH=BITS/32 };
     unsigned int pn[WIDTH];
 public:
-
     bool operator!() const
     {
         for (int i = 0; i < WIDTH; i++)
