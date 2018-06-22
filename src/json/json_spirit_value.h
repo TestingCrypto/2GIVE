@@ -39,7 +39,7 @@ namespace json_spirit
         typedef typename String_type::const_pointer Const_str_ptr;  // eg const char*
 
         Value_impl();  // creates null value
-        Value_impl( Const_str_ptr      value ); 
+        Value_impl( Const_str_ptr      value );
         Value_impl( const String_type& value );
         Value_impl( const Object&      value );
         Value_impl( const Array&       value );
@@ -81,8 +81,8 @@ namespace json_spirit
 
         void check_type( const Value_type vtype ) const;
 
-        typedef boost::variant< String_type, 
-                                boost::recursive_wrapper< Object >, boost::recursive_wrapper< Array >, 
+        typedef boost::variant< String_type,
+                                boost::recursive_wrapper< Object >, boost::recursive_wrapper< Array >,
                                 bool, boost::int64_t, double > Variant;
 
         Value_type type_;
@@ -121,12 +121,12 @@ namespace json_spirit
 
             return obj.back().value_;
         }
-                
+
         static String_type get_name( const Pair_type& pair )
         {
             return pair.name_;
         }
-                
+
         static Value_type get_value( const Pair_type& pair )
         {
             return pair.value_;
@@ -169,12 +169,12 @@ namespace json_spirit
         {
             return obj[ name ] = value;
         }
-                
+
         static String_type get_name( const Pair_type& pair )
         {
             return pair.first;
         }
-                
+
         static Value_type get_value( const Pair_type& pair )
         {
             return pair.second;
@@ -314,7 +314,7 @@ namespace json_spirit
 
         if( type() != lhs.type() ) return false;
 
-        return v_ == lhs.v_; 
+        return v_ == lhs.v_;
     }
 
     template< class Config >
@@ -338,7 +338,7 @@ namespace json_spirit
     template< class Config >
     void Value_impl< Config >::check_type( const Value_type vtype ) const
     {
-        if( type() != vtype ) 
+        if( type() != vtype )
         {
             std::ostringstream os;
 
