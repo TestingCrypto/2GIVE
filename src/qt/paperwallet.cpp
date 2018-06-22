@@ -48,7 +48,6 @@ PaperWallet::PaperWallet(GiftCardDataEntry card)
 
 PaperWallet::~PaperWallet()
 {
-
 }
 
 bool PaperWallet::setTemplate(const QString &filename)
