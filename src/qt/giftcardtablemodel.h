@@ -17,7 +17,7 @@ class WalletModel;
 class GiftCardTableModel : public QAbstractTableModel
 {
     Q_OBJECT
-public:    
+public:
     explicit GiftCardTableModel(GiftCardDataManager gcdb, WalletModel *parent = 0);
     ~GiftCardTableModel();
 
