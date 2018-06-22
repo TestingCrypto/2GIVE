@@ -83,7 +83,7 @@ void Banner::download(int s)
   connect(reply, SIGNAL(readyRead()),
           this, SLOT(httpReadyRead()));
   connect(reply, SIGNAL(downloadProgress(qint64,qint64)),
-          this, SLOT(updateDataReadProgress(qint64,qint64)));  
+          this, SLOT(updateDataReadProgress(qint64,qint64)));
 }
 
 void Banner::updateBanner()
@@ -117,7 +117,7 @@ void Banner::httpFinished()
   file->close();
 
   if(state == GET_IMG)
-  { 
+  {
     boost::filesystem::rename(tmpPath / FILE_TMP, tmpPath / FILE_IMG);
     state = IDLE;
     download(GET_TXT);
