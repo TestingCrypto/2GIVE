@@ -79,7 +79,6 @@ public:
             foreach (GiftCardDataEntry entry, cards) {
                 cachedGiftCardTable.append(GiftCardTableEntry(GiftCardTableEntry::Gift,entry.label, entry.pubkey, entry.generated, entry.balance));
 //                printf("%d | %s | %s\n", entry.id, entry.pubkey.toStdString().c_str(), entry.label.toStdString().c_str());
-
             }
             qSort(cachedGiftCardTable.begin(), cachedGiftCardTable.end(), GiftCardTableEntryLessThan());
         } else
@@ -261,7 +260,6 @@ bool GiftCardTableModel::setData(const QModelIndex & index, const QVariant & val
 
 QVariant GiftCardTableModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
-
     if(orientation == Qt::Horizontal)
     {
         if(role == Qt::DisplayRole)
