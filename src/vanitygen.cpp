@@ -1862,7 +1862,6 @@ vg_output_timing(vg_context_t *vcp, int cycle, struct timeval *last)
             myrate = (myrate * 1000000) / mytime;
             tip->ti_last_rate = myrate;
             rate += myrate;
-
         } else
             rate += tip->ti_last_rate;
     }
@@ -1920,7 +1919,6 @@ vg_context_thread_exit(vg_context_t *vcp)
         break;
     }
     pthread_mutex_unlock(&timing_mutex);
-
 }
 
 static void
@@ -2114,7 +2112,6 @@ vg_output_match_console(vg_context_t *vcp, EC_KEY *pkey, const char *pattern)
             printf("Privkey (ASN1): ");
             dumphex(key_buf, len);
         }
-
     }
 
     if (!vcp->vc_result_file || (vcp->vc_verbose > 0)) {
@@ -2894,7 +2891,6 @@ vg_prefix_context_add_patterns(vg_context_t *vcp,
                 }
                 if (!vp)
                     vp = vp2;
-
             } while (prefix_case_iter_next(&caseiter));
 
             if (!vp && case_impossible)
@@ -3475,7 +3471,6 @@ VanityGen(int addrtype, char *prefix, char *pubKey, char *privKey)
 
         patterns = &prefix;
         npatterns = 1;
-
         if (!vg_context_add_patterns(vcp,
                          (const char ** const) patterns,
                          npatterns))
