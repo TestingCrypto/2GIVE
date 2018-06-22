@@ -101,7 +101,6 @@ public:
     }
 
     int unit;
-
 };
 #include "overviewpage.moc"
 
