@@ -442,7 +442,7 @@ void SendCoinsDialog::updateDisplayUnit()
      if (!checked && model) // coin control features disabled
          CoinControlDialog::coinControl->SetNull();
  }
- 
+
  // Coin Control: button inputs -> show actual coin control dialog
  void SendCoinsDialog::coinControlButtonClicked()
  {
@@ -451,7 +451,7 @@ void SendCoinsDialog::updateDisplayUnit()
      dlg.exec();
      coinControlUpdateLabels();
  }
- 
+
  // Coin Control: checkbox custom change address
  void SendCoinsDialog::coinControlChangeChecked(int state)
  {
@@ -462,18 +462,18 @@ void SendCoinsDialog::updateDisplayUnit()
          else
              CoinControlDialog::coinControl->destChange = CNoDestination();
      }
- 
+
      ui->lineEditCoinControlChange->setEnabled((state == Qt::Checked));
      ui->labelCoinControlChangeLabel->setEnabled((state == Qt::Checked));
  }
- 
+
  // Coin Control: custom change address changed
  void SendCoinsDialog::coinControlChangeEdited(const QString & text)
  {
      if (model)
      {
          CoinControlDialog::coinControl->destChange = CBitcoinAddress(text.toStdString()).Get();
- 
+
          // label for the change address
          ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:black;}");
          if (text.isEmpty())
@@ -492,7 +492,7 @@ void SendCoinsDialog::updateDisplayUnit()
              {
                  CPubKey pubkey;
                  CKeyID keyid;
-                 CBitcoinAddress(text.toStdString()).GetKeyID(keyid);   
+                 CBitcoinAddress(text.toStdString()).GetKeyID(keyid);
                  if (model->getPubKey(keyid, pubkey))
                      ui->labelCoinControlChangeLabel->setText(tr("(no label)"));
                  else
@@ -504,7 +504,7 @@ void SendCoinsDialog::updateDisplayUnit()
          }
      }
  }
- 
+
  // Coin Control: update labels
  void SendCoinsDialog::coinControlUpdateLabels()
  {
