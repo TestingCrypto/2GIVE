@@ -444,7 +444,6 @@ int CAddrMan::Check_()
         CAddrInfo &info = (*it).second;
         if (info.fInTried)
         {
-
             if (!info.nLastSuccess) return -1;
             if (info.nRefCount) return -2;
             setTried.insert(n);
