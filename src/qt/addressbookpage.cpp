@@ -218,7 +218,6 @@ void AddressBookPage::onEditAction()
     QModelIndex origIndex = proxyModel->mapToSource(indexes.at(0));
     dlg.loadRow(origIndex.row());
     dlg.exec();
-
 }
 
 void AddressBookPage::on_signMessage_clicked()
@@ -279,7 +278,6 @@ void AddressBookPage::on_importButton_clicked()
         newAddressToSelect = dlg.getAddress();
     }
     model->refreshAddressTable();
-
 }
 
 void AddressBookPage::importPrivateKey(QString privkey, QString label)
