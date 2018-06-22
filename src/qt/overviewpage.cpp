@@ -22,7 +22,6 @@ class TxViewDelegate : public QAbstractItemDelegate
 public:
     TxViewDelegate(): QAbstractItemDelegate(), unit(BitcoinUnits::BTC)
     {
-
     }
 
     inline void paint(QPainter *painter, const QStyleOptionViewItem &option,
