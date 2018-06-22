@@ -154,7 +154,6 @@ unsigned int scanhash_scrypt(block_header *pdata, void *scratchbuf,
     uint32_t n = 0;
 
     while (true) {
-
         data.nonce = n++;
 
 #ifdef SCRYPT_3WAY
