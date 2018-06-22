@@ -16,7 +16,7 @@ class WalletModel;
 class ShareTableModel : public QAbstractTableModel
 {
     Q_OBJECT
-public:    
+public:
     explicit ShareTableModel(ShareDataManager ccdb, WalletModel *parent = 0);
     ~ShareTableModel();
 
