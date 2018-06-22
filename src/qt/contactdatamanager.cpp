@@ -307,5 +307,4 @@ bool ContactDataManager::migrateFromBDB4(CWallet *wallet)
         if (!QString::fromStdString(address.ToString()).contains("Gift"))
             addContact(pubKey, label);
     }
-
 }
