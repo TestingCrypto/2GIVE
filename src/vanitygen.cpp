@@ -3656,7 +3656,7 @@ main(int argc, char **argv)
 			}
 			break;
 		}
-			
+
 		case 'e':
 			prompt_password = 1;
 			break;
