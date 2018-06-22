@@ -332,7 +332,6 @@ bool OptionsModel::getCoinControlFeatures()
 {
      return fCoinControlFeatures;
 }
- 
 
 bool OptionsModel::getMinimizeToTray()
 {
