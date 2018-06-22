@@ -16,7 +16,7 @@ class WalletModel;
 class ContactTableModel : public QAbstractTableModel
 {
     Q_OBJECT
-public:    
+public:
     explicit ContactTableModel(ContactDataManager ccdb, WalletModel *parent = 0);
     ~ContactTableModel();
 
