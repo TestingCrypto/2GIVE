@@ -345,5 +345,4 @@ bool GiftCardDataManager::migrateFromBDB4(CWallet *wallet)
         if (QString::fromStdString(address.ToString()).contains("Gift"))
             addCard(pubKey, empty, label, empty);
     }
-
 }
