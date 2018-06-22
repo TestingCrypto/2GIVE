@@ -356,7 +356,7 @@ string rfc1123Time()
     char buffer[64];
     time_t now;
     time(&now);
-    struct tm* now_gmt = gmtime(&now);
+    struct tm* now_gmt = gmtime_r(&now);
     string locale(setlocale(LC_TIME, NULL));
     setlocale(LC_TIME, "C"); // we want POSIX (aka "C") weekday/month strings
     strftime(buffer, sizeof(buffer), "%a, %d %b %Y %H:%M:%S +0000", now_gmt);
