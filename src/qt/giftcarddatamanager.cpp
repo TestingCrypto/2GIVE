@@ -19,7 +19,6 @@ static size_t WriteMemoryCallback(void *contents, size_t size, size_t nmemb, voi
 
 GiftCardDataManager::GiftCardDataManager()
 {
-
 }
 
 GiftCardDataManager::GiftCardDataManager(QSqlDatabase qdb, bool &firstRun) :
@@ -88,7 +87,6 @@ bool GiftCardDataManager::addCard(const QString &pubkey, const QString &privkey,
     }
 
     return success;
-
 }
 
 bool GiftCardDataManager::deleteCard(const QString &pubkey, bool deleteFile)
