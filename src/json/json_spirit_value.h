@@ -78,7 +78,6 @@ namespace json_spirit
         static const Value_impl null;
 
     private:
-
         void check_type( const Value_type vtype ) const;
 
         typedef boost::variant< String_type,
