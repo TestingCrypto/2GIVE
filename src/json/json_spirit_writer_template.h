@@ -104,7 +104,6 @@ namespace json_spirit
         typedef typename Object_type::value_type Obj_member_type;
 
     public:
-
         Generator( const Value_type& value, Ostream_type& os, bool pretty )
         :   os_( os )
         ,   indentation_level_( 0 )
@@ -114,7 +113,6 @@ namespace json_spirit
         }
 
     private:
-
         void output( const Value_type& value )
         {
             switch( value.type() )
