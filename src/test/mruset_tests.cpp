@@ -31,14 +31,12 @@ BOOST_AUTO_TEST_SUITE(mruset_tests)
 // Test that an mruset behaves like a set, as long as no more than MAX_SIZE elements are in it
 BOOST_AUTO_TEST_CASE(mruset_like_set)
 {
-
     for (int nTest=0; nTest<NUM_TESTS; nTest++)
     {
         mrutester tester;
         while (tester.size() < MAX_SIZE)
             tester.insert(GetRandInt(2 * MAX_SIZE));
     }
-
 }
 
 // Test that an mruset's size never exceeds its max_size
