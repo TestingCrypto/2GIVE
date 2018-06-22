@@ -874,7 +874,6 @@ public:
         return !(a == b);
     }
     int GetDepthInMainChain() const;
-
 };
 
 
@@ -1499,7 +1498,6 @@ class CBlockLocator
 protected:
     std::vector<uint256> vHave;
 public:
-
     CBlockLocator()
     {
     }
