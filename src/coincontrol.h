@@ -33,7 +33,7 @@ public:
     {
         setSelected.insert(output);
     }
-    
+
     void UnSelect(COutPoint& output)
     {
         setSelected.erase(output);
