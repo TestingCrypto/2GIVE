@@ -207,7 +207,6 @@ void WalletModel::updateContact(const QString &address, const QString &label, co
 {
  if (contactTableModel)
      contactTableModel->updateEntry(address, label, email, url, status);
-
 }
 
 bool WalletModel::validateAddress(const QString &address)
