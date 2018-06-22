@@ -513,7 +513,7 @@ void CoinControlDialog::updateLabels(WalletModel *model, QDialog* dialog)
                 {
                     nChange = nChange + nPayFee - CENT;
                     nPayFee = CENT;
-                }  
+                }
             }
 
             if (nChange == 0)
@@ -645,7 +645,7 @@ void CoinControlDialog::updateView()
             if(ExtractDestination(out.tx->vout[out.i].scriptPubKey, outputAddress))
             {
                 sAddress = CBitcoinAddress(outputAddress).ToString().c_str();
-                
+
                 // if listMode or change => show bitcoin address. In tree mode, address is not shown again for direct wallet address outputs
                 if (!treeMode || (!(sAddress == sWalletAddress)))
                     itemOutput->setText(COLUMN_ADDRESS, sAddress);
@@ -711,7 +711,7 @@ void CoinControlDialog::updateView()
                 itemOutput->setDisabled(true);
                 itemOutput->setIcon(COLUMN_CHECKBOX, QIcon(":/icons/lock_closed"));
             }*/
-              
+
             // set checkbox
             if (coinControl->IsSelected(txhash, out.i))
                 itemOutput->setCheckState(COLUMN_CHECKBOX,Qt::Checked);
