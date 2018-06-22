@@ -106,8 +106,6 @@ WalletModel::WalletModel(CWallet *wallet, OptionsModel *optionsModel, QObject *p
 //    connect(this, SIGNAL(showProgress(QString,int)), this, SLOT(showProgress(QString,int)));
 
     subscribeToCoreSignals();
-
-
 }
 
 WalletModel::~WalletModel()
