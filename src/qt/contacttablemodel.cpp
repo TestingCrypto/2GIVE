@@ -70,7 +70,6 @@ public:
 //                    cachedContactTable.append(ContactTableEntry(ContactTableEntry::Sending, entry.label, entry.pubkey, entry.email, entry.url));
                     cachedContactTable.append(ContactTableEntry(entry.id, entry.label, entry.pubkey, entry.email, entry.url));
     //                printf("%d | %s | %s\n", entry.id, entry.pubkey.toStdString().c_str(), entry.label.toStdString().c_str());
-
                 }
             }
         }
