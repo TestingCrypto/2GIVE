@@ -454,7 +454,6 @@ QString TransactionTableModel::formatTxAmount(const TransactionRecord *wtx, bool
 
 QString TransactionTableModel::formatTxFeeAmount(const TransactionRecord *wtx, bool showUnconfirmed) const
 {
-
     QString str = BitcoinUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), wtx->fee);
     if(showUnconfirmed)
     {
