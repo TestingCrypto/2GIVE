@@ -516,7 +516,6 @@ void BitcoinGUI::createToolBars()
     toolbar->addAction(lockWalletToggleAction);
 //    toolbar->addAction(charitySendAction);
     toolbar->addAction(exportAction);
-
 }
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)
