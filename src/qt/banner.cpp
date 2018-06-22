@@ -48,7 +48,7 @@ void Banner::mousePressEvent ( QMouseEvent * event ) {}
 void Banner::mouseReleaseEvent ( QMouseEvent * event )
 {
   QDesktopServices::openUrl(url);
-} 
+}
 
 void Banner::download(int s)
 {
@@ -57,7 +57,7 @@ void Banner::download(int s)
   if (state != IDLE)
     return;
 
-  state = s; 
+  state = s;
   if(state == GET_IMG)
   {
     u = QString((BANNER_URL + FILE_IMG).c_str());
