@@ -38,7 +38,7 @@ public:
     {
         setSelected.erase(output);
     }
-    
+
     void UnSelectAll()
     {
         setSelected.clear();
@@ -48,7 +48,7 @@ public:
     {
         vOutpoints.assign(setSelected.begin(), setSelected.end());
     }
-        
+
 private:
     std::set<COutPoint> setSelected;
 
