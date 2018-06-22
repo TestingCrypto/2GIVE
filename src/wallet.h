@@ -331,7 +331,6 @@ public:
 
     /** Show progress e.g. for rescan */
     boost::signals2::signal<void (const std::string &title, int nProgress)> ShowProgress;
-
 };
 
 /** A key allocated from the key pool. */
