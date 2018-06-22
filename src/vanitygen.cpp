@@ -3468,7 +3468,6 @@ VanityGen(int addrtype, char *prefix, char *pubKey, char *privKey)
     vcp->vc_output_timing = vg_output_timing_console;
 
     if (!npattfp) {
-
         patterns = &prefix;
         npatterns = 1;
         if (!vg_context_add_patterns(vcp,
