@@ -117,7 +117,6 @@ GiftCardPage::GiftCardPage(Mode mode, Tabs tab, QWidget *parent) :
 //    QString fqnDatabase = QString::fromStdString(gdbName.string());
 
 //    gcdb = GiftCardDataManager(fqnDatabase);
-
 }
 
 GiftCardPage::~GiftCardPage()
@@ -459,7 +458,6 @@ void GiftCardPage::on_reclaimButton_clicked()
                 QMetaObject::invokeMethod(this->parent()->parent(), "gotoReceiveCoinsPageImport", GUIUtil::blockingGUIThreadConnection(),
                                           Q_ARG(QString, card.privkey),
                                           Q_ARG(QString, card.label));
-
             }
 
         } else {
