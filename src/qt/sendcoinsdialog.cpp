@@ -47,7 +47,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
      connect(ui->toolButtonCoinControl, SIGNAL(clicked()), this, SLOT(coinControlButtonClicked()));
      connect(ui->checkBoxCoinControlChange, SIGNAL(stateChanged(int)), this, SLOT(coinControlChangeChecked(int)));
      connect(ui->lineEditCoinControlChange, SIGNAL(textEdited(const QString &)), this, SLOT(coinControlChangeEdited(const QString &)));
- 
+
 		// Coin Control: clipboard actions
      QAction *clipboardQuantityAction = new QAction(tr("Copy quantity"), this);
      QAction *clipboardAmountAction = new QAction(tr("Copy amount"), this);
@@ -73,7 +73,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
      ui->labelCoinControlPriority->addAction(clipboardPriorityAction);
      ui->labelCoinControlLowOutput->addAction(clipboardLowOutputAction);
      ui->labelCoinControlChange->addAction(clipboardChangeAction);
- 
+
     fNewRecipientAllowed = true;
 }
 
@@ -94,7 +94,7 @@ void SendCoinsDialog::setModel(WalletModel *model)
         setBalance(model->getBalance(), model->getStake(), model->getUnconfirmedBalance(), model->getImmatureBalance());
         connect(model, SIGNAL(balanceChanged(qint64, qint64, qint64, qint64)), this, SLOT(setBalance(qint64, qint64, qint64, qint64)));
         connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
-		
+
         // Coin Control
         connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(coinControlUpdateLabels()));
         connect(model->getOptionsModel(), SIGNAL(coinControlFeaturesChanged(bool)), this, SLOT(coinControlFeatureChanged(bool)));
@@ -116,7 +116,7 @@ void SendCoinsDialog::on_sendButton_clicked()
 
     if(!model)
         return;
-	
+
     for(int i = 0; i < ui->entries->count(); ++i)
     {
         SendCoinsEntry *entry = qobject_cast<SendCoinsEntry*>(ui->entries->itemAt(i)->widget());
@@ -391,13 +391,13 @@ void SendCoinsDialog::updateDisplayUnit()
  {
      QApplication::clipboard()->setText(ui->labelCoinControlQuantity->text());
  }
- 
+
  // Coin Control: copy label "Amount" to clipboard
  void SendCoinsDialog::coinControlClipboardAmount()
  {
      QApplication::clipboard()->setText(ui->labelCoinControlAmount->text().left(ui->labelCoinControlAmount->text().indexOf(" ")));
  }
- 
+
  // Coin Control: copy label "Fee" to clipboard
  void SendCoinsDialog::coinControlClipboardFee()
  {
@@ -533,6 +533,4 @@ void SendCoinsDialog::updateDisplayUnit()
         ui->widgetCoinControl->hide();
         ui->labelCoinControlInsuffFunds->hide();
     }
-}	
-
-	
+}
