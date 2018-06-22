@@ -25,7 +25,6 @@ size_t WriteToFile(void *ptr, size_t size, size_t nmemb, FILE *stream) {
 
 ShareDataManager::ShareDataManager()
 {
-
 }
 
 ShareDataManager::ShareDataManager(QSqlDatabase qdb, bool &firstRun) :
