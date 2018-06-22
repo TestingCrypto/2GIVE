@@ -196,7 +196,6 @@ namespace json_spirit
     class Semantic_actions
     {
     public:
-
         typedef typename Value_type::Config_type Config_type;
         typedef typename Config_type::String_type String_type;
         typedef typename Config_type::Object_type Object_type;
