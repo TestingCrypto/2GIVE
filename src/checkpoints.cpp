@@ -341,11 +341,11 @@ namespace Checkpoints
         return false;
     }
 
-    // Automatically select a suitable sync-checkpoint 
+    // Automatically select a suitable sync-checkpoint
     uint256 AutoSelectSyncCheckpoint()
     {
         // Proof-of-work blocks are immediately checkpointed
-        // to defend against 51% attack which rejects other miners block 
+        // to defend against 51% attack which rejects other miners block
 
         // Select the last proof-of-work block
         const CBlockIndex *pindex = GetLastBlockIndex(pindexBest, false);
@@ -390,7 +390,7 @@ namespace Checkpoints
             return false;
         if (hashBlock == hashPendingCheckpoint)
             return true;
-        if (mapOrphanBlocks.count(hashPendingCheckpoint) 
+        if (mapOrphanBlocks.count(hashPendingCheckpoint)
             && hashBlock == WantedByOrphan(mapOrphanBlocks[hashPendingCheckpoint]))
             return true;
         return false;
