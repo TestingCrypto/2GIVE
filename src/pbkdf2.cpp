@@ -65,7 +65,6 @@ HMAC_SHA256_Init(HMAC_SHA256_CTX * ctx, const void * _K, size_t Klen)
 void
 HMAC_SHA256_Update(HMAC_SHA256_CTX * ctx, const void *in, size_t len)
 {
-
     /* Feed data to the inner SHA256 operation. */
     SHA256_Update(&ctx->ictx, in, len);
 }
