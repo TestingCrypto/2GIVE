@@ -1475,7 +1475,6 @@ void ThreadOpenAddedConnections(void* parg)
 
 void ThreadOpenAddedConnections2()
 {
-
     printf("ThreadOpenAddedConnections started\n");
 
     mapMultiArgs["-addnode"].push_back("seed.givecoin.io");
