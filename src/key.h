@@ -116,7 +116,6 @@ protected:
     void SetCompressedPubKey();
 
 public:
-
     void Reset();
 
     CKey();
