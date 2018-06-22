@@ -1260,7 +1260,6 @@ Value listaccounts(const Array& params, bool fHelp)
 
 			BOOST_FOREACH(const PAIRTYPE(CTxDestination, int64)& s, listSent)
 				mapAccountBalances[strSentAccount] -= s.second;
-
 		}
     }
 
@@ -1482,7 +1481,6 @@ void Thread2GiveCoinWalletPassphrase(void* parg)
             LEAVE_CRITICAL_SECTION(cs_nWalletUnlockTime);
             Sleep(nToSleep);
             ENTER_CRITICAL_SECTION(cs_nWalletUnlockTime);
-
         } while(1);
 
         if (nWalletUnlockTime)
