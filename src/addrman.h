@@ -44,7 +44,6 @@ private:
     friend class CAddrMan;
 
 public:
-
     IMPLEMENT_SERIALIZE(
         CAddress* pthis = (CAddress*)(this);
         READWRITE(*pthis);
