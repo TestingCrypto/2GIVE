@@ -811,7 +811,6 @@ bool AppInit2()
         } else {
             printf("Default account \"\" is set to %s\n", CBitcoinAddress(pwalletMain->vchDefaultKey.GetID()).ToString().c_str());
         }
-
     }
 
     printf("%s", strErrors.str().c_str());
