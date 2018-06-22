@@ -403,42 +403,42 @@ void SendCoinsDialog::updateDisplayUnit()
  {
      QApplication::clipboard()->setText(ui->labelCoinControlFee->text().left(ui->labelCoinControlFee->text().indexOf(" ")));
  }
- 
+
  // Coin Control: copy label "After fee" to clipboard
  void SendCoinsDialog::coinControlClipboardAfterFee()
  {
      QApplication::clipboard()->setText(ui->labelCoinControlAfterFee->text().left(ui->labelCoinControlAfterFee->text().indexOf(" ")));
  }
- 
+
  // Coin Control: copy label "Bytes" to clipboard
  void SendCoinsDialog::coinControlClipboardBytes()
  {
      QApplication::clipboard()->setText(ui->labelCoinControlBytes->text());
  }
- 
+
  // Coin Control: copy label "Priority" to clipboard
  void SendCoinsDialog::coinControlClipboardPriority()
  {
      QApplication::clipboard()->setText(ui->labelCoinControlPriority->text());
  }
- 
+
  // Coin Control: copy label "Low output" to clipboard
  void SendCoinsDialog::coinControlClipboardLowOutput()
  {
      QApplication::clipboard()->setText(ui->labelCoinControlLowOutput->text());
  }
- 
+
  // Coin Control: copy label "Change" to clipboard
  void SendCoinsDialog::coinControlClipboardChange()
  {
      QApplication::clipboard()->setText(ui->labelCoinControlChange->text().left(ui->labelCoinControlChange->text().indexOf(" ")));
  }
- 
+
  // Coin Control: settings menu - coin control enabled/disabled by user
  void SendCoinsDialog::coinControlFeatureChanged(bool checked)
  {
      ui->frameCoinControl->setVisible(checked);
- 
+
      if (!checked && model) // coin control features disabled
          CoinControlDialog::coinControl->SetNull();
  }
