@@ -19,7 +19,6 @@ static size_t WriteMemoryCallback(void *contents, size_t size, size_t nmemb, voi
 
 ContactDataManager::ContactDataManager()
 {
-
 }
 
 ContactDataManager::ContactDataManager(QSqlDatabase qdb, bool &firstRun) :
@@ -87,7 +86,6 @@ bool ContactDataManager::addContact(const QString &pubkey, const QString &label,
     }
 
     return success;
-
 }
 
 bool ContactDataManager::deleteContact(const QString &pubkey)
