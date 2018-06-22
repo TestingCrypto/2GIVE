@@ -1462,7 +1462,7 @@ printf("In CreateTransaction()\n");
 printf("wtxNew.BindWallet(this)\n");
 
     wtxNew.BindWallet(this);
-		
+
     {
         LOCK2(cs_main, cs_wallet);
         // txdb must be opened before the mapWallet lock
