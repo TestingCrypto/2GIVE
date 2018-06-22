@@ -369,7 +369,6 @@ namespace json_spirit
     class Json_grammer : public spirit_namespace::grammar< Json_grammer< Value_type, Iter_type > >
     {
     public:
-
         typedef Semantic_actions< Value_type, Iter_type > Semantic_actions_t;
 
         Json_grammer( Semantic_actions_t& semantic_actions )
@@ -411,7 +410,6 @@ namespace json_spirit
         class definition
         {
         public:
-
             definition( const Json_grammer& self )
             {
                 using namespace spirit_namespace;
