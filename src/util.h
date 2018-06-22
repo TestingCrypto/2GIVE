@@ -349,7 +349,7 @@ inline int64 GetTimeMillis()
 inline std::string DateTimeStrFormat(const char* pszFormat, int64 nTime)
 {
     time_t n = nTime;
-    struct tm* ptmTime = gmtime(&n);
+    struct tm* ptmTime = gmtime_r(&n);
     char pszTime[200];
     strftime(pszTime, sizeof(pszTime), pszFormat, ptmTime);
     return pszTime;
