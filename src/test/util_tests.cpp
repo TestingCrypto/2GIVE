@@ -127,9 +127,9 @@ BOOST_AUTO_TEST_CASE(util_ParseParameters)
     // -a, -b and -ccc end up in map, -d ignored because it is after
     // a non-option argument (non-GNU option parsing)
     BOOST_CHECK(mapArgs.size() == 3 && mapMultiArgs.size() == 3);
-    BOOST_CHECK(mapArgs.count("-a") && mapArgs.count("-b") && mapArgs.count("-ccc") 
+    BOOST_CHECK(mapArgs.count("-a") && mapArgs.count("-b") && mapArgs.count("-ccc")
                 && !mapArgs.count("f") && !mapArgs.count("-d"));
-    BOOST_CHECK(mapMultiArgs.count("-a") && mapMultiArgs.count("-b") && mapMultiArgs.count("-ccc") 
+    BOOST_CHECK(mapMultiArgs.count("-a") && mapMultiArgs.count("-b") && mapMultiArgs.count("-ccc")
                 && !mapMultiArgs.count("f") && !mapMultiArgs.count("-d"));
 
     BOOST_CHECK(mapArgs["-a"] == "" && mapArgs["-ccc"] == "multiple");
