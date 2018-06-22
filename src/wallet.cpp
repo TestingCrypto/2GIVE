@@ -354,7 +354,6 @@ bool CWallet::EncryptWallet(const SecureString& strWalletPassphrase)
         // Need to completely rewrite the wallet file; if we don't, bdb might keep
         // bits of the unencrypted private key in slack space in the database file.
         CDB::Rewrite(strWalletFile);
-
     }
     NotifyStatusChanged(this);
 
@@ -744,7 +743,6 @@ void CWalletTx::GetAmounts(int64& nGeneratedImmature, int64& nGeneratedMature, l
 				listReceived.push_back(make_pair(address, txout.nValue));
 		}
     }
-
 }
 
 void CWalletTx::GetAccountAmounts(const string& strAccount, int64& nGeneratedImmature, int64& nGeneratedMature, int64& nReceived,
@@ -1531,7 +1529,6 @@ printf("nChange > 0\n");
 
                 if (nChange > 0)
                 {
-
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
                     // change transaction isn't always pay-to-bitcoin-address
