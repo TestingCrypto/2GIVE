@@ -136,10 +136,10 @@ OBJS= \
     obj/scrypt-x86_64.o
 
 
-all: cleanwatercoind
+all: 2GiveCoind
 
-test check: test_cleanwatercoin FORCE
-	./test_cleanwatercoin
+test check: test_2GiveCoin FORCE
+	./test_2GiveCoin
 
 # auto-generated dependencies:
 -include obj/*.P
@@ -163,7 +163,7 @@ obj/%.o: %.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-cleanwatercoind: $(OBJS:obj/%=obj/%)
+2GiveCoind: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -175,11 +175,11 @@ obj-test/%.o: test/%.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-test_cleanwatercoin: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_2GiveCoin: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(LINK) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ -Wl,-B$(LMODE) -lboost_unit_test_framework $(xLDFLAGS) $(LIBS)
 
 clean:
-	-rm -f cleanwatercoind test_cleanwatercoin
+	-rm -f 2GiveCoind test_2GiveCoind
 	-rm -f obj/*.o
 	-rm -f obj-test/*.o
 	-rm -f obj/*.P
