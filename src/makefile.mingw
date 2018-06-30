@@ -85,10 +85,10 @@ OBJS= \
 	obj/scrypt.h \
     obj/scrypt-x86_64.o
 
-all: cleanwatercoind.exe
+all: 2GiveCoind.exe
 
-test check: test_cleanwatercoin.exe FORCE
-	test_cleanwatercoin.exe
+test check: test_2GiveCoin.exe FORCE
+	test_2GiveCoind.exe
 
 obj/%.o: %.cpp $(HEADERS)
 	g++ -c $(CFLAGS) -o $@ $<
@@ -99,7 +99,7 @@ obj/scrypt-x86.o: scrypt-x86.S
 obj/scrypt-x86_64.o: scrypt-x86_64.S
 	$(CXX) -c $(xCXXFLAGS) -MMD -o $@ $<
 
-cleanwatercoind.exe: $(OBJS:obj/%=obj/%)
+2GiveCoind.exe: $(OBJS:obj/%=obj/%)
 	g++ $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -107,11 +107,11 @@ TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 obj-test/%.o: test/%.cpp $(HEADERS)
 	g++ -c $(TESTDEFS) $(CFLAGS) -o $@ $<
 
-test_cleanwatercoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_2GiveCoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	g++ $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework $(LIBS)
 
 clean:
-	-del /Q cleanwatercoin test_cleanwatercoin
+	-del /Q 2GiveCoin test_2GiveCoin
 	-del /Q obj\*
 	-del /Q obj-test\*
 
