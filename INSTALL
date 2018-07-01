@@ -1,9 +1,9 @@
-Building cleanwatercoin
+Building 2GiveCoin
 
-See doc/readme-qt.rst for instructions on building cleanwatercoin QT,
+See doc/readme-qt.rst for instructions on building 2GiveCoin QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of cleanwatercoin.
+implementation of 2GiveCoin.
 
-See doc/build-*.txt for instructions on building cleanwatercoind,
+See doc/build-*.txt for instructions on building 2GiveCoind,
 the intended-for-services, no-graphical-interface, reference
-implementation of cleanwatercoin.
+implementation of 2GiveCoin.
