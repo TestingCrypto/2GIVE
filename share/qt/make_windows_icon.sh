@@ -1,5 +1,5 @@
 #!/bin/bash
 # create multiresolution windows icon
-ICON_DST=../../src/qt/res/icons/cleanwatercoin.ico
+ICON_DST=../../src/qt/res/icons/2GiveCoin.ico
 
-convert ../../src/qt/res/icons/cleanwatercoin-16.png ../../src/qt/res/icons/cleanwatercoin-32.png ../../src/qt/res/icons/cleanwatercoin-48.png ${ICON_DST}
+convert ../../src/qt/res/icons/2GiveCoin-16.png ../../src/qt/res/icons/2GiveCoin-32.png ../../src/qt/res/icons/2GiveCoin-48.png ${ICON_DST}
